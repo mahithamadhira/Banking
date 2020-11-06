@@ -1,0 +1,42 @@
+.nav-bar-styling{
+  background-color: #B0E0E6;
+  color: #fff;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-primary:visited {
+    background-color: #B0E0E6 !important;
+    border-color: #B0E0E6 !important;
+    color: #000 !important;
+    color: #000 !important;
+}
+
+.btn-outline-primary {
+  border-color: #B0E0E6 !important;
+  color: #000 !important;
+}
+
+#page_heading{
+  font: Raleway,sans-serif;
+  padding: 30px;
+  margin: 10px;
+  padding-bottom: 50px;
+  border-bottom-style: solid !important;
+
+}
+
+.btn-primary{
+  background-color: #B0E0E6 !important;
+  color: #000 !important;
+}
+
+.own{
+  padding-top: 50%;
+  padding-left: 50%;
+  text-align: center;
+  padding: 500px;
+}
+
+.container{
+  padding:50%;
+  position: center;
+}

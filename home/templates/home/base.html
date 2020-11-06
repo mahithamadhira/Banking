@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-type" content="test/html;charset=UTF-8">
+  <meta charset = "utf-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href = "{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href = "{% static 'home/css/font-awesome/fontawesome.min.css' %}" rel="stylesheet">
+  <link href = "{% static 'home/css/home_styling.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap" rel="stylesheet">
+  <!--font-family: 'Raleway', sans-serif;-->
+
+
+  <!--[if lte IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+ <div class = "shadow p-3 mb-5 bg-blue navbar-wrapper nav-bar-styling">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand text-col" href="{% url 'home' %}">Mahitha Madhira</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li></li>
+            <li class="nav-item active">
+              <a class="nav-link text-col" href="#">Sign in <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-col" href="#">Sign up <span class="sr-only">(current)</span></a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+  </div>
+  </header>
+
+  {% block title %}
+  {% endblock %}
+
+  {% block content %}
+
+  {% endblock content %}
+
+<!--  <footer>
+    Still under construction
+  </footer> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src = "{% static 'home/js/jquery-3.5.1.min.js' %}"></script>
+</body>
+
+</html>
