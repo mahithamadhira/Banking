@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',h.home,name="home"),
     path('transactions/',t.transactions,name='transactions'),
+    path('users/',t.users, name = "users"),
 ]

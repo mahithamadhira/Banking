@@ -1,0 +1,37 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+
+<h1>Hello transactions</h1>
+
+
+
+  <table class="table table-bordered" style = "margin: 50px;">
+      <thead>
+          <tr>
+            <th scope="col">User</th>
+            <th scope="col">Amount</th>
+
+          </tr>
+        </thead>
+
+
+
+
+                {% for i in names %}
+      <tr>
+          <th scope="row">{{ i.0 }}</th>
+          <td>{{ i.1 }}</td>
+          <br>
+      </tr>
+      {% endfor %}
+
+
+
+
+
+
+  </table>
+
+
+{% endblock content%}

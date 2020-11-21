@@ -1,12 +1,68 @@
 {% extends 'home/base.html' %}
+
+<head>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jquery-3.5.1.min.js"></script>
+
+
+</head>
+
 {% block content %}
 
 
-<h1>Hello transactions</h1>
 
 
-<div class="container">
-	
+{% if messages %}
+													 <ul class="messages">
+															 {% for message in messages %}
+
+																	<strong> <h6 class="{{ message.tags }}" style = "color: #fa1e0a;">{{ message }}</h6></strong>
+															 
+{% endfor %}
+{% endif %}
+
+<div style="margin-top:200px;">
+		<div class="row">
+			<div style="width:100%">
+
+			<form method="POST" action="{% url 'users' %}">
+				{% csrf_token %}
+
+			  <select name="user1" id="user1">
+
+					{% for i in names %}
+			    <option value="{{i}}">{{i}}</option>
+					{% endfor %}
+
+			  </select>
+
+
+
+				<select name="user2" id="user2">
+
+					{% for i in names %}
+			    <option value="{{i}}">{{i}}</option>
+					{% endfor %}
+
+			  </select>
+
+
+				<input type="number" id="amount" name="amount">
+
+
+
+				<button type = "submit" >
+					Initiate Transaction
+				</button>
+
+			</form>
+
+		</div>
+
+		</div>
+
+
+
 </div>
 
 {% endblock content%}
